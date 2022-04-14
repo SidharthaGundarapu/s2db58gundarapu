@@ -43,9 +43,9 @@ exports.book_create_post = async function (req, res) {
 };
 // Handle car delete form on DELETE.
 exports.book_delete = function (req, res) {
-    res.send('NOT IMPLEMENTED: Car delete DELETE ' + req.params.id);
+    res.send('NOT IMPLEMENTED: Book delete DELETE ' + req.params.id);
 };
-// Handle car update form on PUT.
+// Handle book update form on PUT.
 exports.book_update_put = async function (req, res) {
     console.log(`update on id ${req.params.id} with body
     ${JSON.stringify(req.body)}`)
