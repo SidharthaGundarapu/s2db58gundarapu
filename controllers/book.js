@@ -14,7 +14,7 @@ exports.book_list = async function (req, res) {
 exports.book_detail = async function (req, res) {
     console.log("detail" + req.params.id)
     try {
-        result = await Books.findById(req.params.id)
+        result = await Book.findById(req.params.id)
         res.send(result)
     } catch (error) {
         res.status(500)
