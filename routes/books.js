@@ -17,6 +17,8 @@ router.get('/detail', book_controller.book_view_one_Page);
 router.get('/create', book_controller.book_create_Page);
 /* GET create update page */
 router.get('/update', book_controller.book_update_Page);
+/* GET delete book page */
+router.get('/delete', book_controller.book_delete_Page);
 
 
 module.exports = router;
