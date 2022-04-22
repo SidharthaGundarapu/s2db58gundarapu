@@ -4,10 +4,11 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #ff8800;
 }
 
 .bookAttr {
-  background-color: aquamarine;
+  background-color: rgb(127, 229, 255);
   width: 120px;
+  font-family: 'Times New Roman', Times New Roman, Serif;
  }
