@@ -5,11 +5,16 @@ block content
   p Welcome to #{title}. My name is Sidhartha Gundarapu
   - let items = results
   div(class="container-fluid")
-    div(class="row")
+    div(class="row m-1")
       each books, index in results
-        div(class="col-sm-2" onclick=`buy(${index+1})`) #{books.Book_title} - #{books.genre} - $#{books.cost}
+        - let destination = `dispatch(\"/books/update?id=${books._id}\")`
+        div(class="row-sm-2 m-1" onclick=`buy(${index+1})`) #{books.Book_title} - #{books.genre} - $#{books.cost}
+          button.btn( class="btn-primary ml-1", onclick= destination) Update
 
   script.
     function buy(index){
       alert(`You purchased item ${index}`);
+    }
+    function dispatch(path){
+      window.location.href=path
     }    
