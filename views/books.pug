@@ -4,12 +4,19 @@ block content
   h1= title
   p Welcome to #{title}. My name is Sidhartha Gundarapu
   - let items = results
+  br
+  p Click here to add new book to the collection
+    button(class="btn btn-success m-2" onclick="dispatch('/books/create')") Create
   div(class="container-fluid")
     div(class="row m-1")
       each books, index in results
         - let destination = `dispatch(\"/books/update?id=${books._id}\")`
+        - let destination1 = `dispatch(\"/books/detail?id=${books._id}\")`
+        - let destination2 = `dispatch(\"/books/delete?id=${books._id}\")`
         div(class="row-sm-2 m-1" onclick=`buy(${index+1})`) #{books.Book_title} - #{books.genre} - $#{books.cost}
           button.btn( class="btn-primary ml-1", onclick= destination) Update
+          button.btn( class="btn-info ml-1", onclick= destination1) Detail
+          button.btn( class="btn-danger ml-1", onclick= destination2) Delete
 
   script.
     function buy(index){

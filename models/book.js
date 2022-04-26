@@ -11,9 +11,9 @@ const bookSchema = mongoose.Schema({
         type: String, 
         required: true
     },
-    car_costcost: { 
+    cost: { 
         type: Number, 
-        min:[5, 'Must be at least 5, got {VALUE}'], 
+        min:5, 
         max:100
     }
 })

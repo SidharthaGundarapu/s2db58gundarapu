@@ -88,22 +88,22 @@ module.exports = app;
 async function recreateDB(){
  // Delete everything
  await Book.deleteMany();
- let instance1 = new Book({Book_title:"To Kill a Mockingbird", genre:'Fiction', cost:18});
+ let instance1 = new Book({Book_title:"To Kill a Mockingbird", genre:'Fiction', cost:40});
  instance1.save( function(err,doc) {
    if(err) return console.error(err);
    console.log("First object saved in Book")
  });
 
- let instance2 = new Book({Book_title:"Pride and Prejudice", genre:'Romance', cost:12});
+ let instance2 = new Book({Book_title:"Pride and Prejudice", genre:'Romance', cost:58});
  instance2.save( function(err,doc) {
    if(err) return console.error(err);
-   console.log("Second object saved Book")
+   console.log("Second object saved in Book")
  });
 
- let instance3 = new Book({Book_title:"Reprieve", genre:'Romance', cost:23});
+ let instance3 = new Book({Book_title:"Romeo and Juliet", genre:'Romance', cost:75});
  instance3.save( function(err,doc) {
    if(err) return console.error(err);
-   console.log("Third object saved Book")
+   console.log("Third object saved in Book")
  });
 }
 let reseed = true;
